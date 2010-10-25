@@ -1,0 +1,10 @@
+This file should really be called: Things I'd Like TODO :)
+
+- display images from http downloads
+- multiple visualization selections
+- payload search
+- alternate payload view between ascii, hex, hex-ascii, etc.
+- reports
+- export tagged flows
+- anonymization
+- sort columns of table view

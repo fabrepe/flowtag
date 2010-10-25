@@ -1,0 +1,4 @@
+To install FlowTag, you will need ruby installed on your system.  As the root/administrative user run:
+ruby setup.rb
+
+If you want to just try out the tool without installing, look at HACKING.

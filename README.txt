@@ -1,0 +1,39 @@
+FlowTag V.2.0  Written By: Christopher Lee and scholar01
+=============
+FlowTag is a GUI interface for exploring the TCP flows in a PCAP (network trace recorded by libpcap, tcpdump, ethereal, or wireshark) file.  It's strengths lie in:
+  * rapid reconstruction of flows (via indexing), 
+  * visual selection of source IP and destination TCP ports; 
+  * filtering by time, packet count, and/or byte count
+  * tagging flows with keywords
+
+Version 2.0 is a Ruby port of the original PERL version of FlowTag presented by Christopher Lee at VisSEC '06 [1].  The PERL code was never released because, "Everything is global and in one file, half of the model is contained in the widgets, and I had no clue what it would become when I started.  This ... needs to be rewritten...".
+
+In the Ruby version, there are several companion tools for generating the flow database, dumping the flows, and dumping the contents of a flow.  If you want to perform analysis of large numbers of flows with powerful statistical tools, please take a look at SiLK Tools [4].  Our tool was designed to be much simpler.
+
+To run this code, you will need a version of Ruby with Tk installed.  I tried hard not to use any fancy Tk widgets that would create other dependencies.  If you install ruby via MacPorts, you will need to compile it with the +tk or +mactk variant [2].
+
+There is a really nice Parallel Coordinates [3] widget included in this package.  It is mostly a port from Chris' code, but I added support for more than 2 axes and arbitary formatting.  Both Chris and I hope that other people can take this widget and do some very nice work with it.  We apologize for its current shortcomings.
+
+Future Work
+===========
+  * The FlowDB API is guarenteed to change by V2.1, but will try to stay stable thereafter.
+  * Implement multiple selections via the ParallelCoordinates widget.
+  * A new file format that combines the .pkts, .flows, .tags, and the pcap files (can you say, .tar? or perhaps fuse + cramfs)
+  * Comments, documentation, examples, testing, and all that other stuff that is always promised but never delivered (don't hold your breath for this one)
+  * Opening up development to the general public under a reasonable license
+  * Export flows to files (chopping off HTTP headers when needed)
+  * Payload searches (this is heavy-weight, ngrep might be a better option)
+
+Copyright
+=========
+This code is released under GPLv3. The basic tenents of the GNU Public License are:
+  * the freedom to use the software for any purpose,
+  * the freedom to share the software with your friends and neighbors,
+  * the freedom to change the software to suit your needs, and
+  * the freedom to share the changes you make.
+Please refer to gpl-3.0.txt for more details.
+
+[1] Lee, C. P. and Copeland, J. A. 2006. Flowtag: a collaborative attack-analysis, reporting, and sharing tool for security researchers. In Proceedings of the 3rd international Workshop on Visualization For Computer Security (Alexandria, Virginia, USA, November 03 - 03, 2006). VizSEC '06.
+[2] http://guide.macports.org/#using.variants
+[3] http://catt.okstate.edu/jones98/parallel.html
+[4] http://tools.netsa.cert.org/silk/
