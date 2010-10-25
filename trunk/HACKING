@@ -1,0 +1,4 @@
+If you want to use the flowtag tools without actually installing flowtag, you 
+can use the following structure:
+
+$ ruby -I lib bin/flowtag test/test.pcap 

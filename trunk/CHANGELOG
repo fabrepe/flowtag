@@ -1,0 +1,17 @@
+FlowTag Change Log
+
+01/21/2008 V2.0.4 scholar
+ - General: Changed font to Monaco 12
+ - Slider: added title label to sw corner
+ - Generally labeled the interface using TkLabelFrames
+
+12/17/2007 V2.0.2 scholar
+ - Canvas: changed model to use 3rt instead of log2
+ - Slider: raised clicked header to top
+ - FlowTag: captures Ctrl-C properly
+
+12/16/2007 V2.0.1 scholar
+ - Removed pcaplet requirement by writing own pcap parser (very basic)
+
+12/15/2007 V2.0.0 scholar
+ - Initial finished port from PERL
